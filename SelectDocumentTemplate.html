@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Document Templates</title>
+    <link rel="stylesheet" type="text/css" href="SelectDocumentTemplate.css" />
+    <script src="ClientGlobalContext.js.aspx" type="text/javascript"></script>
+  </head>
+  <body>
+    <h1>Select the Template to Use</h1>
+    <input type="radio" name="templateType" value="2" onclick="onTemplateTypeChange(this.value)" checked /> <label>Word Document</label><br />
+    <input type="radio" name="templateType" value="1" onclick="onTemplateTypeChange(this.value)" /> <label>Excel Document</label><br />
+    <select id="templateSelect"> </select>
+    <div id="buttons">
+      <button id="selectButton" onclick="documentTemplateSelected()">Select Document Template</button>
+      <button id="cancelButton" onclick="window.close()">Cancel</button>
+    </div>
+    <script type="text/javascript" src="SelectDocumentTemplate.js"></script>
+  </body>
+</html>
