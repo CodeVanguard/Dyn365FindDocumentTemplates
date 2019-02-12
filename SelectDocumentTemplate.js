@@ -1,3 +1,7 @@
+// Arguments to get it working in your local environment
+const organizationUrl = '<Your Oranization URL>';
+const apiVersion = 'v8.0';
+
 // Gets DOM references to the controls we will be working with
 const selectControl = document.getElementById('templateSelect');
 const selectButton = document.getElementById('selectButton');
@@ -59,8 +63,6 @@ function requestTemplates(templateType) {
   const filter = "$filter=associatedentitytypecode eq '" + entityLogicalName + "' and documenttype eq " + templateType;
 
   // Create the request URL from the columns and filter
-  const organizationUrl = '<Your Oranization URL>';
-  const apiVersion = 'v8.0';
   const requestUrl = `${organizationUrl}/api/data/${apiVersion}/documenttemplates?${selectFilter}&${filter}`;
 
   // Create a promise that will resolve when the request is complete
